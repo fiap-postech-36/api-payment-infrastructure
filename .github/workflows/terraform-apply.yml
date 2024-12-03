@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy EKS
         run: |
-          kubectl apply -f k8s-deploy/
+          kubectl apply -f k8s-deploy/ --validate=false

@@ -1,10 +1,14 @@
+data "aws_iam_role" "name" {
+  name = "LabRole"
+}
+
 # Instância EC2 para MongoDB
 resource "aws_instance" "mongo_instance" {
   ami           = "ami-0c02fb55956c7d316" # Ubuntu 20.04 (substitua pela AMI da sua região)
-  instance_type = "t3.micro"              # Tipo de instância
+  instance_type = "t3.micro"
   key_name      = var.key_name
-  subnet_id     = aws_subnet.default.id
-  security_groups = [aws_security_group.sg-rds.name]
+  subnet_id     = module.vpc.private_subnets[0] # Use uma sub-rede privada do módulo VPC
+  vpc_security_group_ids = [aws_security_group.sg-rds.id] # Use o ID do grupo de segurança
 
   user_data = <<-EOF
     #!/bin/bash

@@ -5,27 +5,46 @@ variable "regionDefault" {
 variable "db_name" {
   description = "The name of the database"
   type        = string
-  default     = "payment"
+  default     = "restaurant"
 }
 
 variable "db_username" {
   description = "The database admin username"
   type        = string
-  default     = "mongodb"
+  default     = "postgresql"
 }
 
 variable "key_name" {
   type        = string
   sensitive   = true
-  default     = "mongo_db"
+  default     = "vockey"
 }
 
-variable "subnet_ids" {
-  description = "IDs das sub-redes que serão usadas pelo DB Subnet Group."
-  type        = list(string)
-  default     = ["subnet-036e9c0285e80d437", "subnet-0dfe4f03208fc9a22"]
+variable "projectName" {
+  type        = string
+  default     =  "payment-infra"
 }
 
-variable "vpcId" {
-  default = "vpc-03a5cddaa5925e270"
+variable "accountIdVoclabs" {
+  default = "716572403861"
+}
+
+variable "policyArn" {
+  default = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+}
+
+variable "principalArn" {
+  default = "arn:aws:iam::716572403861:role/voclabs"
+}
+
+variable "labRole" {
+  default = "arn:aws:iam::716572403861:role/LabRole"
+}
+
+variable "instanceType" {
+  default = "t3a.medium"
+}
+
+variable "accessConfig" {
+  default = "API_AND_CONFIG_MAP"
 }

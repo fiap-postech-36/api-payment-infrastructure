@@ -3,7 +3,7 @@ name: Infra Plan
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   REGION_DEFAULT: us-east-1

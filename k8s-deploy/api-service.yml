@@ -7,4 +7,4 @@ spec:
   ports:
     - port: 8080
   selector:
-    app: pod-payment
+    app: api-pod

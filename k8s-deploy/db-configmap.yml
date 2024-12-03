@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-configmap
+  labels:
+    app: db-pod
+data:
+  MONGO_INITDB_ROOT_USERNAME: "fiap"
+  MONGO_INITDB_ROOT_PASSWORD: "GpP36_Fiap@2024!"

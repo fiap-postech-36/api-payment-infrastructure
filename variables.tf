@@ -1,54 +1,29 @@
-variable "regionDefault" {
-  default = "us-east-1"
-}
-
-variable "db_name" {
-  description = "The name of the database"
+variable "aws_region" {
+  description = "AWS Region"
   type        = string
-  default     = "restaurant"
+  default     = "us-east-1"
 }
 
-variable "db_username" {
-  description = "The database admin username"
+variable "project_name" {
+  description = "Project Name"
   type        = string
-  default     = "postgresql"
+  default = "ms-payment"
 }
 
-variable "key_name" {
-  type      = string
-  sensitive = true
-  default   = "vockey"
+variable "DEFAULT_USER" {
+  description = "Default user for RabbitMQ"
+  type        = string
+  default = "fiap"
 }
 
-variable "projectName" {
-  type    = string
-  default = "payment-infra"
+variable "DEFAULT_PASS" {
+  description = "Default password for RabbitMQ"
+  type        = string
+  default = "GpP36_Fiap@2024!"
 }
 
-variable "accountIdVoclabs" {
-  default = "716572403861"
-}
-
-variable "policyArn" {
-  default = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-}
-
-variable "principalArn" {
-  default = "arn:aws:iam::716572403861:role/voclabs"
-}
-
-variable "labRole" {
-  default = "arn:aws:iam::716572403861:role/LabRole"
-}
-
-variable "instanceType" {
-  default = "t3a.medium"
-}
-
-variable "accessConfig" {
-  default = "API_AND_CONFIG_MAP"
-}
-
-variable "nodeGroup" {
-  default = "group-36"
+variable "RABBITMQ_HOST" {
+  description = "RabbitMQ Host"
+  type        = string
+  default = "http://af4b45659baf047e49724279ab7d29eb-1909975876.us-east-1.elb.amazonaws.com"
 }

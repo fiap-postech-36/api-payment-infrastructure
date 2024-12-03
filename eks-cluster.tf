@@ -1,6 +1,6 @@
 resource "aws_eks_cluster" "eks-cluster" {
-  name     = "restaurant"
-  role_arn = var.labRole
+  name                      = var.projectName
+  role_arn                  = var.labRole
   enabled_cluster_log_types = ["api", "audit"]
 
   vpc_config {

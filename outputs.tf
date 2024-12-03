@@ -1,14 +1,12 @@
-output "instance_id" {
-  description = "ID da instância EC2"
-  value       = aws_instance.mongo_instance.id
+/*
+output "url_api" {
+  value = length(kubernetes_service.LoadBalancer-api) > 0 ? kubernetes_service.LoadBalancer-api[0].status[0].load_balancer[0].ingress[0].hostname : data.kubernetes_service.existing_service_ms_pedido.status[0].load_balancer[0].ingress[0].hostname
+  description = "The URL of the API"
 }
 
-output "public_ip" {
-  description = "Endereço IP público da instância EC2"
-  value       = aws_instance.mongo_instance.public_ip
-}
+*/
 
-output "security_group_name" {
-  description = "Nome do Security Group associado à instância"
-  value       = aws_security_group.sg-rds.name
+
+output "teste" {
+  value = module.eks
 }

@@ -15,14 +15,14 @@ variable "db_username" {
 }
 
 variable "key_name" {
-  type        = string
-  sensitive   = true
-  default     = "vockey"
+  type      = string
+  sensitive = true
+  default   = "vockey"
 }
 
 variable "projectName" {
-  type        = string
-  default     =  "payment-infra"
+  type    = string
+  default = "payment-infra"
 }
 
 variable "accountIdVoclabs" {
@@ -30,7 +30,7 @@ variable "accountIdVoclabs" {
 }
 
 variable "policyArn" {
-  default = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+  default = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
 }
 
 variable "principalArn" {
@@ -47,4 +47,8 @@ variable "instanceType" {
 
 variable "accessConfig" {
   default = "API_AND_CONFIG_MAP"
+}
+
+variable "nodeGroup" {
+  default = "group-36"
 }

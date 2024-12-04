@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: api-configmap
 data:
-  SPRING_DATA_MONGODB_URI: "mongodb://fiap@GpP36_Fiap@2024!:27017/restaurant"
+  SPRING_DATA_MONGODB_URI: "mongodb://fiap@GpP36_Fiap2024!:27017/restaurant"
   RABBIT_HOST: "fiap"
-  RABBIT_PASSWORD: "GpP36_Fiap@2024!"
+  RABBIT_PASSWORD: "GpP36_Fiap2024!"

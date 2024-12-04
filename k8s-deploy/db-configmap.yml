@@ -6,4 +6,4 @@ metadata:
     app: db-pod
 data:
   MONGO_INITDB_ROOT_USERNAME: "fiap"
-  MONGO_INITDB_ROOT_PASSWORD: "GpP36_Fiap@2024!"
+  MONGO_INITDB_ROOT_PASSWORD: "GpP36_Fiap2024!"

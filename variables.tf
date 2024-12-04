@@ -22,6 +22,7 @@ variable "DEFAULT_PASS" {
   default = "GpP36_Fiap@2024!"
 }
 
+
 variable "RABBITMQ_HOST" {
   description = "RabbitMQ Host"
   type        = string

@@ -11,7 +11,7 @@ provider "kubernetes" {
     args        = ["eks", "get-token", "--cluster-name", module.eks.cluster_name]
   }
 }
-
+ 
 module "vpc" {
   source = "github.com/fiap-postech-36/vpc-infrastructure?ref=v1.0.0"
 
